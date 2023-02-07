@@ -43,9 +43,9 @@ dnn_predictions = pd.DataFrame(dnn_model.predict(test_features), columns=trainin
 
 ```
 
-## Expected Training Features
+## Expected Features
 
-The selected training features and corresponding column names are summarized in the following table:
+The expected features and corresponding column names are summarized in the following table:
 
 | Input Feature | Description | Column Name   |
 | :---:         |    :----   |        :---:   |
