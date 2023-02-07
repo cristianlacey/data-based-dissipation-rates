@@ -11,7 +11,7 @@ $$ g(\Lambda;\Lambda_{\rm ref}) \equiv \frac{\chi_{\Lambda \Lambda}(\Lambda)}{\c
 
 where $\Lambda$ is the progress variable, $\Lambda_{\rm ref} = 0.5$ is the reference progress variable, and $\chi_{\Lambda \Lambda} \equiv 2 D_{\Lambda} \nabla \Lambda \cdot \nabla \Lambda$ is the progress variable dissipation rate. The DNN outputs comprise a normalized instantaneous dissipation rate profile prediction discretized on a uniform 32-point grid in progress variable space. Details of the neural network architecture and training procedure are outlined in the following publication:
 
-- C. E. Lacey, S. Sundaresan, M. E. Mueller, Data-based instantaneous conditional progress variable dissipation rate modeling for turbulent premixed combustion, Combustion and Flame 250 (2023) submitted.
+- C. E. Lacey, S. Sundaresan, M. E. Mueller, Data-based instantaneous conditional progress variable dissipation rate modeling for turbulent premixed combustion, Combustion and Flame (2023) submitted.
 
 We kindly ask that you cite the paper in any published work incorporating this DNN model.
 
@@ -38,8 +38,9 @@ The DNN expects input features with corresponding column names as summarized in 
 |       $e_{\beta}\cdot \nabla \widetilde{\Lambda}/\lvert \nabla \widetilde{\Lambda}\rvert$        | alignment of (intermediate) principal rate of strain with progress variable gradient                  |    ```beta_align```    |
 |       $e_{\gamma}\cdot \nabla \widetilde{\Lambda}/\lvert \nabla \widetilde{\Lambda}\rvert$        | alignment of (largest) principal rate of strain with progress variable gradient        |    ```gamma_align```   |
 
+**Note:** This particular DNN expects an ***unnormalized progress variable***, such that $\Lambda = Y_{\rm{H_2O}}$. Before generating DNN predictions, ensure that the input features $\widetilde{\Lambda}$, $\Lambda_v$, $\lvert\nabla\widetilde{\Lambda}\rvert$, $\overline{\dot{m}}\_{\Lambda}$, and $\widetilde{\chi}\_{\Lambda \Lambda}$ are scaled appropriately such that $\Lambda_{\rm max} = 0.184539$.
 
-## Generating Model Predictions
+## Generating DNN Model Predictions
 
 An example script that loads the DNN model and generates model predictions for a test dataset is provided below. The script assumes the DNN model is stored in the directory ```lambda_profile_dnn/``` and the test dataset is stored in the working directory as a CSV file named ```test_data.csv```.
 
