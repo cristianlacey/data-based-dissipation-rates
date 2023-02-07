@@ -1,6 +1,6 @@
 # Data-Based Instantaneous Conditional Dissipation Rate Profile Model for Premixed Turbulent Combustion
 
-This repository contains a deep neural network (DNN) model for use with manifold models of premixed turbulent combustion. The DNN was trained using ```TensorFlow``` version 2.4.1. The Anaconda environment containing all dependencies used to train and postprocess the DNN model is provided in ```tf-gpu.yml```. All associated libraries will automatically be installed to a new virtual environment named ```myenv``` via the command ```conda env create -n myenv -f tf-gpu.yml```.
+This repository contains a deep neural network (DNN) model for use with manifold models of premixed turbulent combustion. The DNN was trained using ```TensorFlow``` version 2.4.1 in ```Python 3```. The Anaconda environment containing all dependencies used to train and postprocess the DNN model is provided in ```tf-gpu.yml```. All associated libraries will automatically be installed to a new virtual environment named ```myenv``` via the command ```conda env create -n myenv -f tf-gpu.yml```.
 
 
 ## DNN Model Outputs
