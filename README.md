@@ -5,11 +5,11 @@ This repository contains a deep neural network (DNN) model for use with manifold
 
 ## DNN Model Outputs
 
-The DNN predicts the normalized instantaneous dissipation rate profiles defined according to:
+The DNN predicts the normalized instantaneous dissipation rate profiles defined according to
 
-$$ g(\Lambda;\Lambda_{\rm ref}) = \frac{\chi_{\Lambda \Lambda}(\Lambda)}{\chi_{\Lambda \Lambda}(\Lambda_{\rm ref})}$$
+$$ g(\Lambda;\Lambda_{\rm ref}) \equiv \frac{\chi_{\Lambda \Lambda}(\Lambda)}{\chi_{\Lambda \Lambda}(\Lambda_{\rm ref})},$$
 
-where $\Lambda$ is the progress variable, $\Lambda_{\rm ref} = 0.5$ is the reference progress variable, and $\chi_{\Lambda \Lambda}$ is the progress variable dissipation rate. The DNN outputs comprise a normalized instantaneous dissipation rate profile prediction discretized on a uniform 32-point grid in progress variable space. Details of the neural network architecture and training procedure are outlined in the following publication:
+where $\Lambda$ is the progress variable, $\Lambda_{\rm ref} = 0.5$ is the reference progress variable, and $\chi_{\Lambda \Lambda} \equiv 2 D_{\Lambda} \nabla \Lambda \cdot \nabla \Lambda$ is the progress variable dissipation rate. The DNN outputs comprise a normalized instantaneous dissipation rate profile prediction discretized on a uniform 32-point grid in progress variable space. Details of the neural network architecture and training procedure are outlined in the following publication:
 
 - C. E. Lacey, S. Sundaresan, M. E. Mueller, Data-based instantaneous conditional progress variable dissipation rate modeling for turbulent premixed combustion, Combustion and Flame 250 (2023) submitted.
 
