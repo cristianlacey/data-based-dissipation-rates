@@ -33,7 +33,7 @@ training_feature_names = ['FPROG', \
                           'alpha_align', \
                           'beta_align', \
                           'gamma_align']
-training_label_names =  ['f_vec_'+str(i) for i in range(32)]
+training_label_names =  ['f_vec_' + str(i) for i in range(32)]
 
 # Load testing dataset (example for CSV data)
 test_df = pd.read_csv(test_data_dir)
