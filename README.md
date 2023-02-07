@@ -38,7 +38,7 @@ The DNN expects input features with corresponding column names as summarized in 
 |       $e_{\beta}\cdot \nabla \widetilde{\Lambda}/\lvert \nabla \widetilde{\Lambda}\rvert$        | alignment of (intermediate) principal rate of strain with progress variable gradient                  |    ```beta_align```    |
 |       $e_{\gamma}\cdot \nabla \widetilde{\Lambda}/\lvert \nabla \widetilde{\Lambda}\rvert$        | alignment of (largest) principal rate of strain with progress variable gradient        |    ```gamma_align```   |
 
-**Note:** This particular DNN expects an ***unnormalized progress variable***, such that $\Lambda = Y_{\rm{H_2O}}$. Before generating DNN predictions, ensure that the input features $\widetilde{\Lambda}$, $\Lambda_v$, $\lvert\nabla\widetilde{\Lambda}\rvert$, $\overline{\dot{m}}\_{\Lambda}$, and $\widetilde{\chi}\_{\Lambda \Lambda}$ are scaled appropriately such that $\Lambda_{\rm max} = 0.184539$.
+**Note:** This particular DNN expects an ***unnormalized progress variable***, such that $\Lambda = Y_{\rm{H_2O}}$. Before generating DNN predictions, ensure that the input features $\widetilde{\Lambda}$, $\Lambda_v$, $\lvert\nabla\widetilde{\Lambda}\rvert$, $\overline{\dot{m}}\_{\Lambda}$, and $\widetilde{\chi}\_{\Lambda \Lambda}$ are scaled appropriately such that $\Lambda_{\rm max} = 0.184539$. To improve predictions where the dissipation rates are small, the DNN also expects the natural log of the filtered progress variable dissipation rate $ln\left(\widetilde{\chi}\_{\Lambda \Lambda}\right)$ rather than the filtered progress variable dissipation rate itself.
 
 ## Generating DNN Model Predictions
 
