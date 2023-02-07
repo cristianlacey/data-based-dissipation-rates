@@ -13,7 +13,7 @@ where $\Lambda$ is the progress variable, $\Lambda_{\rm ref} = 0.5$ is the refer
 
 - C. E. Lacey, S. Sundaresan, M. E. Mueller, Data-based instantaneous conditional progress variable dissipation rate modeling for turbulent premixed combustion, Combustion and Flame 250 (2023) submitted.
 
-If you use the DNN model in any published work, we kindly ask you to cite this paper.
+We kindly ask that you cite the paper in any published work incorporating this DNN model.
 
 
 ## DNN Model Input Features
