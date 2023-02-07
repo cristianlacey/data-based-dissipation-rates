@@ -1,6 +1,6 @@
 # Data-Based Instantaneous Conditional Dissipation Rate Profile Model for Premixed Turbulent Combustion
 
-This repository contains a deep neural network (DNN) model for use with manifold models of premixed turbulent combustion. The DNN was trained using ```TensorFlow``` version 2.4.1. The Anaconda environment containing all dependencies used to train and postprocess the DNN model is provided in ```tf-gpu.yml```. All associated libraries will automatically be installed to a new virtual environment called ```myenv``` via the command ```conda env create -n myenv -f tf-gpu.yml```.
+This repository contains a deep neural network (DNN) model for use with manifold models of premixed turbulent combustion. The DNN was trained using ```TensorFlow``` version 2.4.1. The Anaconda environment containing all dependencies used to train and postprocess the DNN model is provided in ```tf-gpu.yml```. All associated libraries will automatically be installed to a new virtual environment named ```myenv``` via the command ```conda env create -n myenv -f tf-gpu.yml```.
 
 
 ## DNN Model Outputs
@@ -16,9 +16,9 @@ where $\Lambda$ is the progress variable, $\Lambda_{\rm ref} = 0.5$ is the refer
 If you use the DNN model in any published work, we kindly ask you to cite this paper.
 
 
-## Expected Input Features
+## DNN Model Input Features
 
-The expected input features and corresponding column names are summarized in the following table:
+The DNN expects input features with corresponding column names as summarized in the following table:
 
 | Input Feature | Description | Column Name   |
 | :---:         |    :----   |        :---:   |
@@ -39,9 +39,9 @@ The expected input features and corresponding column names are summarized in the
 |       $e_{\gamma}\cdot \nabla \widetilde{\Lambda}/\lvert \nabla \widetilde{\Lambda}\rvert$        | alignment of (largest) principal rate of strain with progress variable gradient        |    ```gamma_align```   |
 
 
-## Example Script
+## Generating Model Predictions
 
-An example script for loading the DNN model stored in ```lambda_profile_dnn/``` and generating model predictions for a test dataset stored as a CSV at ```test_data.csv``` is provided as follows:
+An example script that loads the DNN model and generates model predictions for a test dataset is provided below. The script assumes the DNN model is stored in the directory ```lambda_profile_dnn/``` and the test dataset is stored in the working directory as a CSV file named ```test_data.csv```.
 
 ```python
 # Import required libraries
