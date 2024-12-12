@@ -50,8 +50,8 @@ import pandas as pd
 import tensorflow as tf
 
 # Define directories and column names
-test_data_dir = 'test_data.csv'
-dnn_dir = 'lambda_profile_dnn'
+test_data_path = 'test_data.csv'
+dnn_path = 'lambda_profile_dnn'
 label_names =  ['g_' + str(i) for i in range(32)]
 feature_names = ['FPROG', \
                  'PROGV', \
@@ -70,11 +70,11 @@ feature_names = ['FPROG', \
                  'gamma_align']
 
 # Load testing dataset (example for CSV data)
-test_df = pd.read_csv(test_data_dir)
+test_df = pd.read_csv(test_data_path)
 test_features = test_df[feature_names]
 
 # Load DNN model
-dnn_model = tf.keras.models.load_model(dnn_dir)
+dnn_model = tf.keras.models.load_model(dnn_path)
 
 # Generate test predictions
 dnn_predictions = pd.DataFrame(dnn_model.predict(test_features), columns=label_names)
